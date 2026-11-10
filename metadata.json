@@ -1,0 +1,6 @@
+{
+  "name": "Forever Atlas",
+  "description": "Real-time World of Warcraft: Forever second-screen companion with voice chat, interactive world map, image forge, and 72-hour player memory.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

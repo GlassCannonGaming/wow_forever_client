@@ -14,8 +14,8 @@ export default defineConfig({
         name: 'Forever Atlas — WoW Forever Companion',
         short_name: 'ForeverAtlas',
         description: 'Real-time World of Warcraft: Forever second-screen companion with voice chat, interactive world map, image forge, and 72-hour player memory.',
-        theme_color: '#0d0f14',
-        background_color: '#0d0f14',
+        theme_color: '#0b0907',
+        background_color: '#0b0907',
         display: 'standalone',
         start_url: '/',
         scope: '/',
@@ -46,8 +46,16 @@ export default defineConfig({
       },
     }),
   ],
+  resolve: {
+    dedupe: ['react', 'react-dom'],
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'motion/react'],
+  },
   server: {
     port: 3000,
     host: '0.0.0.0',
+    hmr: process.env.DISABLE_HMR !== 'true',
+    watch: process.env.DISABLE_HMR === 'true' ? null : {},
   },
 });
